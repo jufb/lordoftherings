@@ -1,0 +1,28 @@
+#Home {
+	background-image:  linear-gradient(rgba(255, 255, 255, 0.80), rgba(255, 255, 255, 0.600)), url("pexels-bence-kondor-2259917.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	position: relative;
+	text-align: center;
+	padding-bottom: 2rem;
+}
+#Home a {
+	color: rgb(128, 97, 20);
+}
+#Home h1::before {
+	content: '“';
+}
+#Home h1::after {
+	content: '”';
+}
+#Home img {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+    width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    width: stretch;
+}

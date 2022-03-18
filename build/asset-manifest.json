@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.css": "/lordoftherings/static/css/main.073c9b0a.css",
-    "main.js": "/lordoftherings/static/js/main.278d012c.js",
+    "main.css": "/lordoftherings/static/css/main.a5be1c4b.css",
+    "main.js": "/lordoftherings/static/js/main.5a41c59d.js",
     "static/js/787.35a63b4c.chunk.js": "/lordoftherings/static/js/787.35a63b4c.chunk.js",
-    "static/media/logo.svg": "/lordoftherings/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/pexels-bence-kondor-2259917.jpg": "/lordoftherings/static/media/pexels-bence-kondor-2259917.3047a0efc87cd87c9404.jpg",
+    "static/media/theonering.png": "/lordoftherings/static/media/theonering.5bd3f2b4b84500c1aef0.png",
+    "static/media/lotr-thefellowshipofthering.png": "/lordoftherings/static/media/lotr-thefellowshipofthering.39426e458076d441b79f.png",
+    "static/media/tree-bottom.png": "/lordoftherings/static/media/tree-bottom.55a4a77b07b03218d3eb.png",
+    "static/media/tree.png": "/lordoftherings/static/media/tree.6ecc5fe3f0e9c906a2c2.png",
     "index.html": "/lordoftherings/index.html",
-    "main.073c9b0a.css.map": "/lordoftherings/static/css/main.073c9b0a.css.map",
-    "main.278d012c.js.map": "/lordoftherings/static/js/main.278d012c.js.map",
+    "main.a5be1c4b.css.map": "/lordoftherings/static/css/main.a5be1c4b.css.map",
+    "main.5a41c59d.js.map": "/lordoftherings/static/js/main.5a41c59d.js.map",
     "787.35a63b4c.chunk.js.map": "/lordoftherings/static/js/787.35a63b4c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.278d012c.js"
+    "static/css/main.a5be1c4b.css",
+    "static/js/main.5a41c59d.js"
   ]
 }
