@@ -8,7 +8,7 @@ export function Header() {
         <Navbar collapseOnSelect fixed="top" expand="md" bg="dark" variant="dark">
           <Navbar.Toggle />
 
-          <Navbar.Brand href="/">
+          <Navbar.Brand href="#Home">
             <img src={LOTRImg} alt="The one ring." />
             The Lord of The Rings
           </Navbar.Brand>

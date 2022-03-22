@@ -8,7 +8,7 @@
 
 .accordion-body {
 	background-color: antiquewhite;
-	font-family: fantasy;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	line-height: 1.5;
 	border: .7rem solid rgba(0, 0, 0, 0.562);
 	border-radius: 0rem 0rem .3rem .3rem;
@@ -20,9 +20,6 @@
 	background-size: contain;
 }
 
-.accordion-body div {
-	text-align: center;
-}
 .accordion-body div:first-child {
 	padding-top: 1rem;
 }
@@ -32,21 +29,30 @@
 
 .accordion button {
 	font-family: cursive;
+	justify-content: center;
 	font-size: x-large;
 	min-width: 340px;
 	max-width: 100%;
-	position: relative;
-	width: 100%;
 	height: 70px;
 	border-radius: 0.25rem;
 	border: 0;
-	color: goldenrod;
+	color: goldenrod !important;
 	background: linear-gradient(rgb(110, 110, 110), rgb(0, 0, 0));
 	box-shadow: 0px 30px 20px rgba(0, 0, 0, 0.50);
 }
 
-.accordion button:hover {
-	transition: all 0.2s ease-in;
-	color: gold;
-	cursor: pointer;
+.accordion button:hover,
+.accordion button:focus
+ {
+	color: gold !important;
+	box-shadow: 0px 30px 20px rgba(0, 0, 0, 0.50);
+	border: 0px;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='goldenrod'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.accordion-button::after {
+    margin-left: 1rem;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='gold'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }

@@ -1,23 +1,39 @@
 import '../assets/characters.css';
 import { useEffect, useState } from 'react';
-import { FormControl, Form, CardGroup, Card, Container, Button } from 'react-bootstrap';
+import { FormControl, Form, Card, Container, Button, Alert } from 'react-bootstrap';
 import LOTRImg from '../assets/tree-bottom.png';
 import ReactPaginate from 'react-paginate';
+//import dataChars from './characters.json';
 
 export function Characters(props) {
-  const [loading, setLoading] = useState(false);
-  const [character, setCharacter] = useState([]);
+  const [loading, setLoading] = useState(false); //Used to show the "loading..." when necessary
+  const [characters, setCharacters] = useState([]); //Used to load the characters from the API
+  const [show, setShow] = useState(false); //Alert to search with 3+ letters
+
+  //Used for pagination
   const [countPages, setCountPages] = useState(0);
   const dataLimit = 10;
   
+   //Used to search the characters by name
+  const [c, setC] = useState("");
+  const [charnames, setCharNames] = useState([]);
+
   useEffect(() => {
     setLoading(true);
 
     const fetchData = async () => {
+      //Sets the paginated list of characters
       const rawCharacters = await fetch(props.chars + '?page=1&limit=' + dataLimit, { headers: props.headers });
       const chars = await rawCharacters.json();
-      setCharacter(chars.docs);
+      //const chars = dataChars;
+      setCharacters(chars.docs);
       setCountPages(Math.ceil(chars.total / dataLimit));
+
+      // //Sets the full list of chars to search
+      const rawFullCharacters = await fetch(props.chars, { headers: props.headers });
+      const cnames = await rawFullCharacters.json();
+      //const cnames = dataChars;
+      setCharNames(cnames.docs);
     };
 
     fetchData();
@@ -25,18 +41,36 @@ export function Characters(props) {
     setLoading(false);
   }, [props, dataLimit]);
 
-  //Gets the clicked item number on the Pagination and call the fetchDataPaginated
+  //Gets the clicked item number on the Pagination and call the API again to set the page and the limit of items in each page
   const pageClick = async (data) => {
     let page = data.selected + 1;
-    const chars = await fetchDataPaginated(page);
-    setCharacter(chars.docs);
-  }
-
-  // Fetch the API again to set the page and the limit of items in each page
-  const fetchDataPaginated = async (page) => {
     const rawCharacters = await fetch(props.chars + '?page=' + page + '&limit=' + dataLimit, { headers: props.headers });
     const chars = await rawCharacters.json();
-    return chars;
+    // const chars = dataChars;
+    setCharacters(chars.docs);
+    setCountPages(Math.ceil(chars.total / dataLimit));
+  }
+
+  // Find the character by name
+  const search = async () => {
+    if (c.trim().length > 0 && c.trim().length < 3){
+      setShow(true);
+    }
+
+    if (c.trim().length >= 3) {
+      setShow(false);
+      const ch = charnames.filter(function(array) { 
+        const cname = array.name.toUpperCase();
+        return cname.includes(c.toUpperCase());
+      });
+
+      setCharacters(ch);
+      setCountPages(0);
+    }
+    if (c.trim().length === 0) {
+      setShow(false);
+      pageClick(0);
+    }
   }
 
   if(loading) {
@@ -53,17 +87,26 @@ export function Characters(props) {
 
         <h1 className='text-light'>Characters</h1>
 
+        {show &&
+          <Alert variant="warning" onClose={() => setShow(false)} dismissible>
+            Please include <strong>three (3) letters or more</strong> to search.
+          </Alert>
+        }
+
         <Form className="d-flex container">
           <FormControl
             type="search"
             placeholder="Search by name"
-            aria-label="Search" disabled
+            aria-label="Search"
+            value={c}
+            onChange={(e) => setC(e.target.value)}
           />
-          <Button variant="primary" disabled>Search</Button>
+          <span className="sr-only">Search characters by name here.</span>&nbsp;
+          <Button variant="primary" onClick={search}>Search</Button>
         </Form>
 
-        <CardGroup>
-          {character.map ((array) => (
+        <div className="group-card">
+          {characters.length > 0 ? characters.map ((array) => (
             <Card key={array._id}>
               <Card.Link href={array.wikiUrl} target="_blank">
               <Card.Title>{array.name}</Card.Title>
@@ -78,28 +121,39 @@ export function Characters(props) {
               </Card.Body>
               </Card.Link>
             </Card>
-          ))}
-        </CardGroup>
+          ))
+          : <div className='text-light'>
+              <p className='text-center'><strong>No characters found.</strong></p>
+              <div id="quote">
+                "Not all those who wander are lost."
+                <br/>
+                <small>― Bilbo Baggins</small>
+              </div>
+            </div>
+        }
+        </div>
 
-        <ReactPaginate
-          previousLabel={"<"}
-          nextLabel={">"}
-          breakLabel={"..."}
-          pageCount={countPages}
-          marginPagesDisplayed={2}
-          pageRangeDisplayed={3}
-          onPageChange={pageClick}
-          containerClassName={"pagination"}
-          pageClassName={"page-item"}
-          pageLinkClassName={"page-link"}
-          previousClassName={"page-item"}
-          previousLinkClassName={"page-link"}
-          nextClassName={"page-item"}
-          nextLinkClassName={"page-link"}
-          breakClassName={"page-item"}
-          breakLinkClassName={"page-link"}
-          activeClassName={"active"}
-        />
+        {countPages > 0 &&
+          <ReactPaginate
+            previousLabel={"<"}
+            nextLabel={">"}
+            breakLabel={"..."}
+            pageCount={countPages}
+            marginPagesDisplayed={2}
+            pageRangeDisplayed={3}
+            onPageChange={pageClick}
+            containerClassName={"pagination"}
+            pageClassName={"page-item"}
+            pageLinkClassName={"page-link"}
+            previousClassName={"page-item"}
+            previousLinkClassName={"page-link"}
+            nextClassName={"page-item"}
+            nextLinkClassName={"page-link"}
+            breakClassName={"page-item"}
+            breakLinkClassName={"page-link"}
+            activeClassName={"active"}
+          />
+        }
 
       </Container>
 

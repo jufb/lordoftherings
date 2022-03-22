@@ -35,7 +35,7 @@ export function Quotes(props) {
     <main id="Quotes">
       <Container className='text-center'>
         <blockquote>{quote}</blockquote>
-        <cite>- {character}</cite>
+        <cite>― {character}</cite>
       </Container>
     </main>
   );
