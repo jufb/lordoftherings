@@ -1,7 +1,12 @@
 # Lord Of The Rings
 I love The Lord Of The Rings. So, I created with a lot of love this ReactJR app using an API with contents of the movies and books.
-
 I hope you enjoy it as much as I did!
+
+## What you can do:
+- Find your favourite characters!
+- See The Lord Of The Rings books and its chapters!
+- See quotes from the characters randomly!
+- Finally, enjoy an immersion into this legendarium!
 
 ## How to use it:
 1. Download the latest release
