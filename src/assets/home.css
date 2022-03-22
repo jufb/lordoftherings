@@ -8,6 +8,20 @@
 	text-align: center;
 	padding-bottom: 2rem;
 }
+
+@media (min-width: 375px) {
+	#Home .jumbotron {
+		padding-top: 30%;
+		padding-bottom: 20%;
+	}
+}
+@media (min-width: 1000px) {
+	#Home .jumbotron {
+		padding-top: 20rem;
+		padding-bottom: 20%;
+	}
+}
+
 #Home a {
 	color: rgb(128, 97, 20);
 }

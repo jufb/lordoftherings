@@ -8,32 +8,25 @@ import ReactPaginate from 'react-paginate';
 export function Characters(props) {
   const [loading, setLoading] = useState(false); //Used to show the "loading..." when necessary
   const [characters, setCharacters] = useState([]); //Used to load the characters from the API
-  const [show, setShow] = useState(false); //Alert to search with 3+ letters
 
   //Used for pagination
   const [countPages, setCountPages] = useState(0);
-  const dataLimit = 10;
+  const dataLimit = 10; //Change this to show more/less characters
   
-   //Used to search the characters by name
-  const [c, setC] = useState("");
-  const [charnames, setCharNames] = useState([]);
+  //Used for searching
+  const [character, setCharacter] = useState(""); //Used to search the characters by name
+  const [show, setShow] = useState(false); //Alert to search with 3+ letters
 
   useEffect(() => {
     setLoading(true);
 
     const fetchData = async () => {
       //Sets the paginated list of characters
-      const rawCharacters = await fetch(props.chars + '?page=1&limit=' + dataLimit, { headers: props.headers });
+      const rawCharacters = await fetch(props.chars + '&page=1&limit=' + dataLimit, { headers: props.headers });
       const chars = await rawCharacters.json();
-      //const chars = dataChars;
-      setCharacters(chars.docs);
-      setCountPages(Math.ceil(chars.total / dataLimit));
 
-      // //Sets the full list of chars to search
-      const rawFullCharacters = await fetch(props.chars, { headers: props.headers });
-      const cnames = await rawFullCharacters.json();
-      //const cnames = dataChars;
-      setCharNames(cnames.docs);
+      setCharacters(chars.docs);
+      setCountPages(chars.pages);
     };
 
     fetchData();
@@ -42,32 +35,27 @@ export function Characters(props) {
   }, [props, dataLimit]);
 
   //Gets the clicked item number on the Pagination and call the API again to set the page and the limit of items in each page
-  const pageClick = async (data) => {
-    let page = data.selected + 1;
-    const rawCharacters = await fetch(props.chars + '?page=' + page + '&limit=' + dataLimit, { headers: props.headers });
+  const pageClick = async (page) => {
+    let pageAdd = page.selected + 1;
+    const rawCharacters = await fetch(props.chars + '&name=/' + character + '/i&page=' + pageAdd + '&limit=' + dataLimit, { headers: props.headers });
     const chars = await rawCharacters.json();
-    // const chars = dataChars;
+
     setCharacters(chars.docs);
-    setCountPages(Math.ceil(chars.total / dataLimit));
+    setCountPages(chars.pages);
   }
 
   // Find the character by name
   const search = async () => {
-    if (c.trim().length > 0 && c.trim().length < 3){
+    if (character.trim().length > 0 && character.trim().length < 3){
       setShow(true);
     }
 
-    if (c.trim().length >= 3) {
+    if (character.trim().length >= 3) {
       setShow(false);
-      const ch = charnames.filter(function(array) { 
-        const cname = array.name.toUpperCase();
-        return cname.includes(c.toUpperCase());
-      });
-
-      setCharacters(ch);
-      setCountPages(0);
+      pageClick(0);
     }
-    if (c.trim().length === 0) {
+
+    if (character.trim().length === 0) {
       setShow(false);
       pageClick(0);
     }
@@ -98,8 +86,8 @@ export function Characters(props) {
             type="search"
             placeholder="Search by name"
             aria-label="Search"
-            value={c}
-            onChange={(e) => setC(e.target.value)}
+            value={character}
+            onChange={(e) => setCharacter(e.target.value)}
           />
           <span className="sr-only">Search characters by name here.</span>&nbsp;
           <Button variant="primary" onClick={search}>Search</Button>
