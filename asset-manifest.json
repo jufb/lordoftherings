@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/lordoftherings/static/css/main.86c89cf7.css",
-    "main.js": "/lordoftherings/static/js/main.b9fb7c0f.js",
+    "main.css": "/lordoftherings/static/css/main.ae954151.css",
+    "main.js": "/lordoftherings/static/js/main.2e2414cb.js",
     "static/js/787.35a63b4c.chunk.js": "/lordoftherings/static/js/787.35a63b4c.chunk.js",
     "static/media/pexels-bence-kondor-2259917.jpg": "/lordoftherings/static/media/pexels-bence-kondor-2259917.3047a0efc87cd87c9404.jpg",
     "static/media/theonering.png": "/lordoftherings/static/media/theonering.5bd3f2b4b84500c1aef0.png",
@@ -9,12 +9,12 @@
     "static/media/tree-bottom.png": "/lordoftherings/static/media/tree-bottom.55a4a77b07b03218d3eb.png",
     "static/media/tree.png": "/lordoftherings/static/media/tree.6ecc5fe3f0e9c906a2c2.png",
     "index.html": "/lordoftherings/index.html",
-    "main.86c89cf7.css.map": "/lordoftherings/static/css/main.86c89cf7.css.map",
-    "main.b9fb7c0f.js.map": "/lordoftherings/static/js/main.b9fb7c0f.js.map",
+    "main.ae954151.css.map": "/lordoftherings/static/css/main.ae954151.css.map",
+    "main.2e2414cb.js.map": "/lordoftherings/static/js/main.2e2414cb.js.map",
     "787.35a63b4c.chunk.js.map": "/lordoftherings/static/js/787.35a63b4c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.86c89cf7.css",
-    "static/js/main.b9fb7c0f.js"
+    "static/css/main.ae954151.css",
+    "static/js/main.2e2414cb.js"
   ]
 }
