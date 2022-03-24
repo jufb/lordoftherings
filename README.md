@@ -1,5 +1,6 @@
 # Lord Of The Rings
-I love The Lord Of The Rings. So, I created with a lot of love this ReactJR app using APIs of the movies and books.
+I love The Lord Of The Rings. So, I created with a lot of love this ReactJR app using an API of the movies and books.
+
 I hope you enjoy it as much as I did!
 
 ## What you can do:
