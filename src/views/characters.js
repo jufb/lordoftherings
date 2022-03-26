@@ -5,8 +5,17 @@ import LOTRImg from '../assets/tree-bottom.png';
 import ReactPaginate from 'react-paginate';
 //import dataChars from './characters.json';
 
+function isValid(value) {
+  if (value.length > 0 && value !== "NaN" && value !== null) {
+    return value;
+  }
+  else {
+    return "Not informed";
+  }
+}
+
 export function Characters(props) {
-  const [loading, setLoading] = useState(false); //Used to show the "loading..." when necessary
+  const [loading, setLoading] = useState(false);
   const [characters, setCharacters] = useState([]); //Used to load the characters from the API
 
   //Used for pagination
@@ -94,22 +103,23 @@ export function Characters(props) {
         </Form>
 
         <div className="group-card">
-          {characters.length > 0 ? characters.map ((array) => (
-            <Card key={array._id}>
-              <Card.Link href={array.wikiUrl} target="_blank">
-              <Card.Title>{array.name}</Card.Title>
-              <Card.Body>
-                <Card.Text>
-                  <label>Race:</label> {array.race}<br />
-                  <label>Gender:</label> {array.gender}<br />
-                  <label>Birth:</label> {array.birth}<br />
-                  <label>Spouse:</label> {array.spouse}<br />
-                  <label>Death:</label> {array.death}<br />
-                </Card.Text>
-              </Card.Body>
-              </Card.Link>
-            </Card>
-          ))
+          {characters.length > 0 ? 
+            characters.map ((array) => (
+              <Card key={array._id}>
+                <Card.Link href={array.wikiUrl} target="_blank">
+                <Card.Title>{array.name}</Card.Title>
+                <Card.Body>
+                  <Card.Text>
+                  <label>Race:</label> {isValid(array.race)}<br />
+                  <label>Gender:</label> {isValid(array.gender)}<br />
+                  <label>Birth:</label> {isValid(array.birth)}<br />
+                  <label>Spouse:</label> {isValid(array.spouse)}<br />
+                  <label>Death:</label> {isValid(array.death)}
+                  </Card.Text>
+                </Card.Body>
+                </Card.Link>
+              </Card>
+            ))
           : <div className='text-light'>
               <p className='text-center'><strong>No characters found.</strong></p>
               <div id="quote">
