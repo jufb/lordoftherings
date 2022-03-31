@@ -22,7 +22,7 @@ export const Footer = (props) => {
             I do not own this content. All credits go to its rightful owners.
           </p>
         </div>
-        <Container id="contacts">
+        <Container fluid id="contacts">
           © {props.year} Designed by Juliana F. Borges <a href="https://jufb.github.io" rel="noreferrer" target="_blank">
             <img src="https://jufb.github.io/favicon.ico" width="40" height="40" alt="Juliana F. Borges logo." />
           </a>
