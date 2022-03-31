@@ -1,34 +1,48 @@
-@import url('https://fonts.googleapis.com/css?family=Special+Elite');
-
 blockquote {
-	font-family: 'Special Elite', cursive;
-	font-size: 2rem;
-	max-width: inherit;
-	line-height: 1.4;
-	position: relative;
-	margin-top: 8rem;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 2.5rem;
+	line-height: 3.5rem;
+	padding-top: 1rem;
+	text-transform: uppercase;
+}
+
+#quote-footer {
+	padding-bottom: 2rem;
+}
+
+footer blockquote {
+	font-size: 2.5rem;
+	line-height: 2.5rem;
+}
+
+footer cite {
+	font-size: smaller;
 }
 
 blockquote::before,
 blockquote::after {
-	color: #46443de5;
-	font-size: 8rem;
+	color: inherit;
+	font-size: inherit;
 }
 
 blockquote::before {
-	content: '“';
-	position: absolute;
-	top: -4rem;
-	left: -1rem;
+	content: '“ ';
 }
 
 blockquote::after {
-	content: '”';
-	position: absolute;
-	bottom: -9.5rem;
-	right: -1rem;
+	content: ' ”';
 }
 
-cite {
-	line-height: 2;
+#img-tolkien {
+	width: 340px !important;
+	min-width: 340px !important;
+	position: relative !important;
+	box-shadow: 10px 0px 20px rgba(58, 58, 58, 0.795);
+}
+
+.row {
+	align-items: center;
+}
+.tolkien-row {
+	max-width: 400px;
 }

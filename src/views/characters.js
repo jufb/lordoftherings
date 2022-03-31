@@ -122,10 +122,9 @@ export function Characters(props) {
             ))
           : <div className='text-light'>
               <p className='text-center'><strong>No characters found.</strong></p>
-              <div id="quote">
-                "Not all those who wander are lost."
-                <br/>
-                <small>― Bilbo Baggins</small>
+              <div>
+                <blockquote>Not all those who wander are lost.</blockquote>
+                <cite>― Bilbo Baggins</cite>
               </div>
             </div>
         }

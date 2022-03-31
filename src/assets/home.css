@@ -1,5 +1,5 @@
 #Home {
-	background-image:  linear-gradient(rgba(255, 255, 255, 0.80), rgba(255, 255, 255, 0.600)), url("pexels-bence-kondor-2259917.jpg");
+	background-image:  linear-gradient(rgba(255, 255, 255, 0.80), rgba(255, 255, 255, 0.700)), url("pexels-bence-kondor-2259917.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -11,13 +11,13 @@
 
 @media (min-width: 375px) {
 	#Home .jumbotron {
-		padding-top: 30%;
+		padding-top: 20%;
 		padding-bottom: 20%;
 	}
 }
 @media (min-width: 1000px) {
 	#Home .jumbotron {
-		padding-top: 20rem;
+		padding-top: 15rem;
 		padding-bottom: 20%;
 	}
 }
@@ -31,6 +31,7 @@
 #Home h1::after {
 	content: '”';
 }
+
 #Home img {
 	position: absolute;
 	left: 0;

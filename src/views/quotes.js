@@ -1,12 +1,13 @@
 import '../assets/quotes.css';
 import { useEffect, useState } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Image, Row, Col } from 'react-bootstrap';
+
 
 export function Quotes(props) {
   const [loading, setLoading] = useState(false);
-  const [quote, setQuote] = useState()
+  const [quote, setQuote] = useState();
   const [character, setCharacter] = useState();
-
+  
   useEffect(() => {
     setLoading(true);
     const fetchData = async () => {
@@ -33,9 +34,19 @@ export function Quotes(props) {
 
   return (
     <main id="Quotes">
-      <Container className='text-center'>
-        <blockquote>{quote}</blockquote>
-        <cite>― {character}</cite>
+      <Container className='jumbotron'>
+        <Row>
+          <Col className="tolkien-row">
+            <div>
+              <Image id="img-tolkien" rounded thumbnail alt="Tolkien." src="https://epistleofdude.files.wordpress.com/2019/05/tolkien-gardens-merton-college.jpg" />
+              <br /><small>Tolkien in the gardens of Merton College, Oxford University.</small>
+            </div>
+          </Col>
+          <Col>
+            <blockquote>{quote}</blockquote>
+            <cite>― {character}</cite>
+          </Col>
+        </Row>
       </Container>
     </main>
   );

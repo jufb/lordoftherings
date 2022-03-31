@@ -28,11 +28,10 @@
 }
 
 .accordion button {
-	font-family: cursive;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	justify-content: center;
-	font-size: x-large;
+	font-size: 1.3rem;
 	min-width: 340px;
-	max-width: 100%;
 	height: 70px;
 	border-radius: 0.25rem;
 	border: 0;
