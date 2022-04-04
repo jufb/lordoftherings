@@ -1,5 +1,4 @@
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import LOTRImg from '../assets/theonering.png';
 
 export function Header() {
   return (
@@ -9,7 +8,7 @@ export function Header() {
           <Navbar.Toggle />
 
           <Navbar.Brand href="#Home">
-            <img src={LOTRImg} alt="The one ring." />
+            <img src='https://static.wixstatic.com/media/249783_d33bf99f6c1d42b082526cbb6630d96e~mv2.png' alt="The one ring." />
             The Lord of The Rings
           </Navbar.Brand>
 

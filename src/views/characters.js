@@ -1,9 +1,7 @@
 import '../assets/characters.css';
 import { useEffect, useState } from 'react';
 import { FormControl, Form, Card, Container, Button, Alert } from 'react-bootstrap';
-import LOTRImg from '../assets/tree-bottom.png';
 import ReactPaginate from 'react-paginate';
-//import dataChars from './characters.json';
 
 function isValid(value) {
   if (value.length > 0 && value !== "NaN" && value !== null) {
@@ -155,7 +153,7 @@ export function Characters(props) {
       </Container>
 
       <div className='img-bottom'>
-        <img src={LOTRImg} alt="Tree." />
+        <img src='https://static.wixstatic.com/media/249783_b9607965ddfa4f1d9d2c147bdccf8669~mv2.png' alt="Tree." />
       </div>
 
     </main>

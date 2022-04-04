@@ -9,7 +9,7 @@ body {
 	font-size: 1.1rem;
 	font-weight: normal;
 	line-height: 1.5;
-	background-color: white;
+	background-color: rgb(253, 217, 163);
 	background: rgb(253, 217, 163);
 	position: relative;
 }
@@ -32,7 +32,7 @@ a {
 }
 
 a:hover {
-	color: #94545c;
+	color: inherit;
 	text-decoration: underline;
 }
 
@@ -76,7 +76,7 @@ h6,
 
 .btn:focus,
 .btn.focus {
-	box-shadow: 0 0 0 3px rgba(182, 126, 133, 0.25);
+	box-shadow: 0 0 0 3px rgba(182, 148, 126, 0.25);
 }
 
 .btn-primary {
@@ -115,7 +115,7 @@ h6,
 
 .btn-link:focus,
 .btn-link:hover {
-	color: #94545c;
+	color: #947454;
 }
 
 .navbar {
@@ -144,6 +144,7 @@ h6,
 .navbar-dark .navbar-brand:focus,
 .navbar-dark .navbar-brand:hover {
 	color: gold;
+	transition: color .3s;
 }
 
 .navbar-dark .navbar-nav .nav-link {

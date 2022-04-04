@@ -1,11 +1,10 @@
 import { Container, Button } from 'react-bootstrap';
 import { Github, Linkedin } from 'react-bootstrap-icons';
-import LOTRImg from '../assets/lotr-thefellowshipofthering.png';
 
 export const Footer = (props) => {
   return (
     <footer className="box-footer">
-      <img src={LOTRImg} alt="The fellowship of the Ring crossing a mountain." />
+      <img src='https://static.wixstatic.com/media/249783_8e5cc480ce6a4db9bf98c9b062107966~mv2.png' alt="The fellowship of the Ring crossing a mountain." />
       <Container fluid className="box-dark">
         <div id="quote-footer">
           <blockquote>May it be a light to you in dark places, when all other lights go out.</blockquote>
