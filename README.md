@@ -16,7 +16,7 @@ I hope you enjoy it as much as I did!
 4. Access the directory of the project "lordoftherings"
 5. Run the command:
 ```
-$ npm i react-bootstrap react-bootstrap-icons react-paginate react-scripts
+npm i react-bootstrap react-bootstrap-icons react-paginate react-scripts
 ```
 
 ## The original documentation to this API:
