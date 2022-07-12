@@ -7,7 +7,7 @@ I hope you enjoy it as much as I did!
 - Find your favourite characters!
 - See The Lord Of The Rings books and its chapters!
 - See quotes from the characters randomly!
-- Finally, enjoy an immersion into the legendarium!
+- Enjoy an immersion into the legendarium!
 
 ## How to use it:
 1. Download the latest release
