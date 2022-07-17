@@ -1,22 +1,24 @@
 blockquote {
 	font-family: 'Cormorant Garamond', serif;
-	font-size: 2.5rem;
-	line-height: 3.5rem;
-	padding-top: 1rem;
-	text-transform: uppercase;
+}
+
+@media (min-width: 375px) {
+	blockquote {
+		font-size: 1.5rem;
+		line-height: 1.5rem;
+		padding-top: 1rem;
+	}	
+}
+@media (min-width: 1200px) {
+	blockquote {
+		font-size: 2.5rem;
+		line-height: 3.5rem;
+		padding-top: 1rem;
+	}
 }
 
 #quote-footer {
 	padding-bottom: 2rem;
-}
-
-footer blockquote {
-	font-size: 2.5rem;
-	line-height: 2.5rem;
-}
-
-footer cite {
-	font-size: smaller;
 }
 
 blockquote::before,
@@ -33,16 +35,50 @@ blockquote::after {
 	content: '”';
 }
 
-#img-tolkien {
-	width: 340px !important;
-	min-width: 340px !important;
-	position: relative !important;
-	box-shadow: 10px 0px 20px rgba(58, 58, 58, 0.795);
+#Quotes .container {
+	display: flex;
+	flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: center;
 }
 
-.row {
-	align-items: center;
+#blank-page {
+	background-color: white;
+	transform: rotate(-2deg); 
+	box-shadow: 0px 5px 10px rgba(58, 58, 58, 0.795);
+	padding: 2rem;
+	min-width: 300px;
+	min-height: 400px;
+	width: 600px;
+	display: grid;
+	align-content: center;
 }
-.tolkien-row {
-	max-width: 400px;
+#img-tolkien {
+	width: 280px;
+	position: relative !important;
 }
+#photo {
+	width: 320px;
+	box-shadow: 0px 10px 20px rgba(58, 58, 58, 0.795);
+	border: antiquewhite solid 20px;
+	text-align: center;
+	font-size: small;
+	background-color: antiquewhite;
+	transform: rotate(5deg); 
+}
+
+#refresh svg:hover {
+	fill: black;
+	animation: refresh-spin .5s linear;
+}
+
+@keyframes refresh-spin {
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(360deg);
+	}
+  }

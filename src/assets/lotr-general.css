@@ -9,8 +9,11 @@ body {
 	font-size: 1.1rem;
 	font-weight: normal;
 	line-height: 1.5;
-	background-color: rgb(253, 217, 163);
-	background: rgb(253, 217, 163);
+	background-color: floralwhite;
+	background-image: url("https://images.pexels.com/photos/172296/pexels-photo-172296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+	background-repeat: repeat;
+	background-position: 0;
+	background-attachment: fixed;
 	position: relative;
 }
 
@@ -231,11 +234,12 @@ h6,
 
 .box-footer {
 	max-width: 100%;
-	background-color: inherit;
+	background-color: #fdd9a3;
 }
 
 .box-footer img {
 	max-width: inherit;
+	margin-bottom: -1px;
 }
 
 .box-footer .box-dark {

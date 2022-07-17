@@ -1,51 +1,49 @@
+#Chapters img {
+	transform: rotate(180Deg);
+	width: stretch;
+}
+
 .accordion {
 	font-family: inherit;
 	font-size: medium;
+	display: flex;
+    flex-direction: row;
+	flex-wrap: wrap;
+    align-items: flex-start;
+	justify-content: space-around;
 }
+.accordion-item {
+	min-width: 330px;
+	border-radius: 0.25rem;
+	box-shadow: 0px 5px 10px rgba(58, 58, 58, 0.795);
+}
+
 .accordion-header {
 	margin: 0;
 }
-
 .accordion-body {
-	background-color: antiquewhite;
 	font-family: Georgia, 'Times New Roman', Times, serif;
-	line-height: 1.5;
-	border: .7rem solid rgba(0, 0, 0, 0.562);
-	border-radius: 0rem 0rem .3rem .3rem;
-	border-top: 0px;
-	box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
-	background-image:  linear-gradient(rgba(250, 235, 215, 0.900), rgba(250, 235, 215, 0.900)), url("https://static.wixstatic.com/media/249783_d33bf99f6c1d42b082526cbb6630d96e~mv2.png");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-}
-
-.accordion-body div:first-child {
-	padding-top: 1rem;
-}
-.accordion-body div:last-child {
-	padding-bottom: 1rem;
+	text-align: justify;
+	font-size: small;
 }
 
 .accordion button {
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	justify-content: center;
 	font-size: 1.3rem;
-	min-width: 340px;
 	height: 70px;
 	border-radius: 0.25rem;
-	border: 0;
-	color: goldenrod !important;
-	background: linear-gradient(rgb(110, 110, 110), rgb(0, 0, 0));
-	box-shadow: 0px 30px 20px rgba(0, 0, 0, 0.50);
+	border: 0px;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.50) !important;
 }
 
 .accordion button:hover,
-.accordion button:focus
- {
-	color: gold !important;
-	box-shadow: 0px 30px 20px rgba(0, 0, 0, 0.50);
-	border: 0px;
+.accordion button:focus,
+.accordion button:active,
+.accordion-button:not(.collapsed) {
+	color: goldenrod !important;
+	background: #404040;
+	border-color: transparent;
 }
 
 .accordion-button:not(.collapsed)::after {
@@ -53,5 +51,5 @@
 }
 .accordion-button::after {
     margin-left: 0.5rem;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='gold'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='goldenrod'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }

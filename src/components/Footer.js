@@ -11,15 +11,14 @@ export const Footer = (props) => {
           <cite>― J.R.R. Tolkien, The Fellowship of the Ring</cite>
         </div>
         <div id="contacts">
-          <Button variant="link" href="https://github.com/jufb/lordoftherings" rel="noreferrer" target="_blank">
+          <p><Button variant="link" href="https://github.com/jufb/lordoftherings" rel="noreferrer" target="_blank">
             <Github color="white" size="40" />
           </Button>
           <Button variant="link" href="https://www.linkedin.com/in/fborgesj" rel="noreferrer" target="_blank">
             <Linkedin color="white" size="40" />
           </Button>
-          <p>
-            I do not own this content. All credits go to its rightful owners.
           </p>
+          I do not own this content. All credits go to its rightful owners.
         </div>
         <Container fluid id="contacts">
           © {props.year} Designed by Juliana F. Borges <a href="https://jufb.github.io" rel="noreferrer" target="_blank">

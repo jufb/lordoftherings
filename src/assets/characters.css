@@ -1,22 +1,14 @@
 #Characters {
     background: #212121;
 }
-#Characters::before {
+#Characters::before, .jumbotron {
 	content: "";
 	display: block;
-	padding-top: 1px;
+	margin-top: -1px;
 }
-
-.img-bottom {
-	background: rgb(253, 217, 163);
+#Characters::after, .pagination, .jumbotron {
+	margin-bottom: -2px;
 }
-.img-bottom img {
-	width: 100%;
-	width: -moz-available;          /* WebKit-based browsers will ignore this. */
-	width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
-	width: stretch;
-}
-
 .group-card {
 	margin: 2rem 0 2rem 0;
 	display: flex;
@@ -98,6 +90,6 @@
 
 .page-link:focus,
 .page-link:hover {
-	color: #94545c;
+	color: goldenrod;
 	text-decoration: none;
 }

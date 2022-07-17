@@ -151,11 +151,7 @@ export function Characters(props) {
         }
 
       </Container>
-
-      <div className='img-bottom'>
-        <img src='https://static.wixstatic.com/media/249783_b9607965ddfa4f1d9d2c147bdccf8669~mv2.png' alt="Tree." />
-      </div>
-
+      
     </main>
   );
 }

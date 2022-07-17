@@ -34,38 +34,36 @@ export function Chapters(props) {
   return (
 
     <main id="Chapters">
+      <img id="tree" src="https://static.wixstatic.com/media/249783_d87aa89bb473474da923e62cf0973b6c~mv2.png" alt="Tree." />
 
       <Container className='text-center jumbotron'>
 
       <h1>Chapters</h1>
 
-      {book.map((element, id) => (
+      <div id="books">
+          <Accordion>
+            {book.map((element, id) => (
+            <Accordion.Item key={id} eventKey={id}>
+              <Accordion.Header>{element.name}</Accordion.Header>
+              <Accordion.Body>
 
-        <Accordion defaultActiveKey="0" key={id}>
-          <Accordion.Item key={element._id}>
-            <Accordion.Header>{element.name}</Accordion.Header>
-            <Accordion.Collapse>
-            <Accordion.Body>
+                {chapter.map((array, id2) => {
+                  if (element._id === array.book) {
+                    return (
+                      <div id={array.book} key={array._id}>
+                        {id2+1} - {array.chapterName}
+                      </div>
+                    );
+                  }
+                  return null;
+                })}
 
-              {chapter.map((array, id2) => {
-                let c = null;
-                if (element._id === array.book) {
-                  c = (
-                    <div id={array.book} key={array._id}>
-                      {id2 + 1} - {array.chapterName}
-                    </div>
-                  );
-                }
-                return c;
-              })}
-
-            </Accordion.Body>
-            </Accordion.Collapse>
-          </Accordion.Item>
+              </Accordion.Body>
+            </Accordion.Item>
+          ))}
         </Accordion>
 
-      ))}
-
+      </div>
       </Container>
 
     </main>
