@@ -7,7 +7,7 @@ I hope you enjoy it as much as I did!
 - Find your favourite characters!
 - See The Lord Of The Rings books and its chapters!
 - See quotes from the characters randomly!
-- Finally, enjoy an immersion into this legendarium!
+- Enjoy an immersion into the legendarium!
 
 ## How to use it:
 1. Download the latest release
@@ -16,7 +16,7 @@ I hope you enjoy it as much as I did!
 4. Access the directory of the project "lordoftherings"
 5. Run the command:
 ```
-$ npm i react-bootstrap react-bootstrap-icons react-paginate react-scripts
+npm i react-bootstrap react-bootstrap-icons react-paginate react-scripts
 ```
 
 ## The original documentation to this API:
