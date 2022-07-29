@@ -1,43 +1,38 @@
 #Home {
-	background-image:  linear-gradient(rgba(255, 255, 255, 0.80), rgba(255, 255, 255, 0.700)), url("https://static.wixstatic.com/media/249783_36af6a59986641f4a704cd3538e16417~mv2.jpg");
+	background-image:  linear-gradient(to right, rgba(255,255,255, 0),rgba(255, 255, 255, 0.845)), url("https://static.wixstatic.com/media/249783_36af6a59986641f4a704cd3538e16417~mv2.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	background-attachment: fixed;
 	position: relative;
 	text-align: center;
-	padding-bottom: 2rem;
+}
+#Home h1 {
+	color: white;
+	font-weight: bolder;
+}
+@media (min-width:375px) {
+	#Home h1 {
+		font-size: 50px;
+	}
+}
+
+@media (min-width: 576px) {
+	#Home h1 {
+		font-size: 90px;
+	}
+}
+
+#Home .container {
+	height: 100%;
 }
 
 @media (min-width: 375px) {
-	#Home .jumbotron {
+	#Home .container {
 		padding-top: 20%;
 		padding-bottom: 20%;
 	}
 }
-@media (min-width: 1000px) {
-	#Home .jumbotron {
-		padding-top: 15rem;
-		padding-bottom: 20%;
-	}
-}
 
-#Home a {
-	color: rgb(128, 97, 20);
-}
-#Home h1::before {
-	content: '“';
-}
-#Home h1::after {
-	content: '”';
-}
-
-#Home img {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-    width: -moz-available;          /* WebKit-based browsers will ignore this. */
-    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
-    width: stretch;
+.btn:hover {
+	text-decoration: none;
 }

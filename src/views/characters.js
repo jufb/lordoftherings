@@ -18,7 +18,7 @@ export function Characters(props) {
 
   //Used for pagination
   const [countPages, setCountPages] = useState(0);
-  const dataLimit = 10; //Change this to show more/less characters
+  const dataLimit = 8; //Change this to show more/less characters
   
   //Used for searching
   const [character, setCharacter] = useState(""); //Used to search the characters by name
@@ -77,6 +77,7 @@ export function Characters(props) {
   return (
 
     <main id="Characters">
+      <img id="tree-top" src="https://static.wixstatic.com/media/249783_d87aa89bb473474da923e62cf0973b6c~mv2.png" alt="Tree." />
 
       <Container className='jumbotron'>
 
@@ -94,7 +95,7 @@ export function Characters(props) {
             placeholder="Search by name"
             aria-label="Search"
             value={character}
-            onChange={(e) => setCharacter(e.target.value)}
+            onChange={e => setCharacter(e.target.value)}
           />
           <span className="sr-only">Search characters by name here.</span>&nbsp;
           <Button variant="primary" onClick={search}>Search</Button>
@@ -151,7 +152,6 @@ export function Characters(props) {
         }
 
       </Container>
-      
     </main>
   );
 }

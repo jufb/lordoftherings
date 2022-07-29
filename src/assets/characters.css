@@ -1,14 +1,15 @@
 #Characters {
     background: #212121;
 }
-#Characters::before, .jumbotron {
-	content: "";
-	display: block;
-	margin-top: -1px;
+#Characters .jumbotron {
+	padding-top: 0;
 }
-#Characters::after, .pagination, .jumbotron {
-	margin-bottom: -2px;
+
+#tree-top {
+	width: stretch;
+	background-color: floralwhite;
 }
+
 .group-card {
 	margin: 2rem 0 2rem 0;
 	display: flex;

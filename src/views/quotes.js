@@ -28,6 +28,7 @@ export function Quotes(props) {
 
   return (
     <main id="Quotes">
+      <div id="tree-bottom" />
       <Container>
           <div id="blank-page">
             {loading ? <center>Loading...</center> 

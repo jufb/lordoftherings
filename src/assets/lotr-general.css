@@ -10,11 +10,6 @@ body {
 	font-weight: normal;
 	line-height: 1.5;
 	background-color: floralwhite;
-	background-image: url("https://images.pexels.com/photos/172296/pexels-photo-172296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-	background-repeat: repeat;
-	background-position: 0;
-	background-attachment: fixed;
-	position: relative;
 }
 
 h1,
@@ -174,19 +169,15 @@ h6,
 .jumbotron {
 	padding: 0rem 1rem;
 	border-radius: 0.3rem;
+	min-height: 50%;
+	padding-top: 5rem;
+	padding-bottom: 2rem;
 }
 
 @media (min-width: 375px) {
 	h1,
 	.h1 {
 		font-size: 2.5rem;
-	}
-	.jumbotron {
-		padding-top: 5rem;
-		padding-left: 1rem;
-		padding-right: 1rem;
-		padding-bottom: 2rem;
-		margin-bottom: 2rem;
 	}
 }
 @media (min-width: 1000px) {
@@ -195,10 +186,10 @@ h6,
 		font-size: 4rem;
 	}	
 }
-
-.jumbotron-fluid {
-	border-radius: 0;
-	text-align: left;
+h1::first-letter,
+.h1::first-letter {
+	font-size: 7rem;
+	text-decoration: underline solid 5px goldenrod;
 }
 
 .bg-primary {

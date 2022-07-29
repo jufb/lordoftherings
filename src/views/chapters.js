@@ -1,6 +1,6 @@
 import '../assets/chapters.css';
 import { useEffect, useState } from 'react';
-import { Container, Accordion} from "react-bootstrap";
+import { Container, Row, Col, Accordion} from "react-bootstrap";
 
 export function Chapters(props) {
   const [loading, setLoading] = useState(false);
@@ -34,36 +34,38 @@ export function Chapters(props) {
   return (
 
     <main id="Chapters">
-      <img id="tree" src="https://static.wixstatic.com/media/249783_d87aa89bb473474da923e62cf0973b6c~mv2.png" alt="Tree." />
+      <Container className='jumbotron'>
 
-      <Container className='text-center jumbotron'>
+        <Row>
+          <Col>
+            <h1>Chapters</h1>
+            <p>A rememberance of the journey of the ring. Click to expand the book titles and see the chapters.</p>
+          </Col>
+          <Col>
+              <Accordion>
+                {book.map((element, id) => (
+                <Accordion.Item key={id} eventKey={id}>
+                  <Accordion.Header>{element.name}</Accordion.Header>
+                  <Accordion.Body>
 
-      <h1>Chapters</h1>
+                    {chapter.map((array, id2) => {
+                      if (element._id === array.book) {
+                        return (
+                          <div id={array.book} key={array._id}>
+                            {id2+1} - {array.chapterName}
+                          </div>
+                        );
+                      }
+                      return null;
+                    })}
 
-      <div id="books">
-          <Accordion>
-            {book.map((element, id) => (
-            <Accordion.Item key={id} eventKey={id}>
-              <Accordion.Header>{element.name}</Accordion.Header>
-              <Accordion.Body>
+                  </Accordion.Body>
+                </Accordion.Item>
+                ))}
+              </Accordion>
+          </Col>
+        </Row>
 
-                {chapter.map((array, id2) => {
-                  if (element._id === array.book) {
-                    return (
-                      <div id={array.book} key={array._id}>
-                        {id2+1} - {array.chapterName}
-                      </div>
-                    );
-                  }
-                  return null;
-                })}
-
-              </Accordion.Body>
-            </Accordion.Item>
-          ))}
-        </Accordion>
-
-      </div>
       </Container>
 
     </main>

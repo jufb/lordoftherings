@@ -35,6 +35,21 @@ blockquote::after {
 	content: '”';
 }
 
+#tree-bottom {
+	height: 150px;
+	background-image: url("https://static.wixstatic.com/media/249783_d87aa89bb473474da923e62cf0973b6c~mv2.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	transform: scaleY(-1);
+}
+
+#Quotes {
+	background-image: url("https://images.pexels.com/photos/172296/pexels-photo-172296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+	background-repeat: repeat;
+	background-position: 0;
+	position: relative;
+}
+
 #Quotes .container {
 	display: flex;
 	flex-direction: row;
@@ -55,6 +70,7 @@ blockquote::after {
 	display: grid;
 	align-content: center;
 }
+
 #img-tolkien {
 	width: 280px;
 	position: relative !important;
