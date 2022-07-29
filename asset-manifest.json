@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/lordoftherings/static/css/main.25f3e25c.css",
-    "main.js": "/lordoftherings/static/js/main.d53cc4a5.js",
+    "main.css": "/lordoftherings/static/css/main.b5c7010a.css",
+    "main.js": "/lordoftherings/static/js/main.44ba2bb7.js",
     "index.html": "/lordoftherings/index.html",
-    "main.25f3e25c.css.map": "/lordoftherings/static/css/main.25f3e25c.css.map",
-    "main.d53cc4a5.js.map": "/lordoftherings/static/js/main.d53cc4a5.js.map"
+    "main.b5c7010a.css.map": "/lordoftherings/static/css/main.b5c7010a.css.map",
+    "main.44ba2bb7.js.map": "/lordoftherings/static/js/main.44ba2bb7.js.map"
   },
   "entrypoints": [
-    "static/css/main.25f3e25c.css",
-    "static/js/main.d53cc4a5.js"
+    "static/css/main.b5c7010a.css",
+    "static/js/main.44ba2bb7.js"
   ]
 }
