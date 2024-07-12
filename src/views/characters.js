@@ -4,7 +4,7 @@ import { FormControl, Form, Card, Container, Button, Alert } from 'react-bootstr
 import ReactPaginate from 'react-paginate';
 
 function isValid(value) {
-  if (value.length > 0 && value !== "NaN" && value !== null) {
+  if (value !== null && value.length > 0 && value !== "NaN") {
     return value;
   }
   else {
