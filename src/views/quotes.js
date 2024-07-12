@@ -23,6 +23,7 @@ export function Quotes(props) {
   
   useEffect(() => {
     fetchData();
+    // eslint-disable-next-line
   }, []);
 
   return (
